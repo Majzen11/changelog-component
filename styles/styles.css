@@ -1,0 +1,102 @@
+:root {
+  --dark-color: hsl(0, 0%, 0%);
+  --medium-color: hsl(0, 0%, 60%);
+  --light-color: hsl(0, 0%, 100%);
+}
+
+* ,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+
+.medium-color { 
+  color: var(--medium-color);
+}
+
+.changelog {
+  border: var(--dark-color) 2px solid;
+  border-radius: 1.2rem;
+  padding: 3rem;
+  text-align: center;
+  max-width: 52rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 25px 0;
+  
+}
+
+.changelog-title {
+  margin-block-end: 3rem;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  gap: 1rem;
+  
+}
+
+.item-date {
+  text-align: end;
+  padding-block: 0.2rem;
+  padding-inline-end: 1rem;
+  
+}
+
+.item-date::after {
+  content: "";
+  background-color: var(--dark-color);
+  height: 100%;
+  width: 2px;
+  top: 0;
+  position: absolute;
+  margin-inline-start: 2rem;
+  
+}
+
+.item-description {
+   text-align: start;
+   padding-inline-start: 1.5rem;
+   position: relative;
+   padding-block: 0.2rem;
+}
+
+.item-description::before {
+  content: "";
+  background-color: var(--dark-color);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 25%;
+  left: -6px;
+  position: absolute;
+  
+}
+
+a {
+  color: var(--light-color);
+  text-decoration: none;
+}
+button {
+  
+  background-color: var(--dark-color);
+  padding: 0.9rem 2.2rem;
+  margin-block-start: 2.5rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
